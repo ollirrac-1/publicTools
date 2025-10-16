@@ -499,25 +499,25 @@ const MSAIncomeData = () => {
           />
         </div>
 
-        <div className="mt-4 flex items-center space-x-4">
-          <label className="text-sm font-medium text-gray-700">
-            Your Pre-Tax Income:
-          </label>
-          <div className="relative">
-            <span className="absolute left-3 top-2 text-gray-500">$</span>
-            <input
-              type="number"
-              placeholder="e.g., 75000"
-              value={userIncome}
-              onChange={(e) => setUserIncome(e.target.value)}
-              className="pl-7 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-40"
-            />
+        <div className="mt-4">
+          <div className="flex items-center space-x-4">
+            <label className="text-sm font-medium text-gray-700">
+              Your Pre-Tax Income:
+            </label>
+            <div className="relative">
+              <span className="absolute left-3 top-2 text-gray-500">$</span>
+              <input
+                type="number"
+                placeholder="e.g., 75000"
+                value={userIncome}
+                onChange={(e) => setUserIncome(e.target.value)}
+                className="pl-7 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-40"
+              />
+            </div>
           </div>
-          {userIncome && (
-            <span className="text-sm text-gray-600">
-              (Compare your income to each metro's per capita average)
-            </span>
-          )}
+          <p className="text-sm text-gray-500 italic mt-1 ml-0">
+            Enter an income to view more metrics
+          </p>
         </div>
       </div>
 
